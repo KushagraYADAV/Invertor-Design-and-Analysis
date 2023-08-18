@@ -27,6 +27,8 @@ Similarly, when we sweep VDS source for different values of VGS, I get the below
 
 ![Screenshot from 2023-08-16 15-23-02](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/caf5a8d2-ae7b-4e48-be29-2af806ab256b)
 
+## CMOS Inverter Design and Analysis
+
 
 
  
