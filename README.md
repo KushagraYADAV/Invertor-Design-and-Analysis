@@ -23,6 +23,7 @@ We can see the DC sweep on the VGS source for different values of VDS:
 
 ![Screenshot from 2023-08-16 15-31-23](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/3bed2355-5887-4dee-a8a7-a4c7e06a84ee)
 
+Similarly, when we sweep VDS source for different values of VGS, I get the below plot:
 
 ![Screenshot from 2023-08-16 15-23-02](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/caf5a8d2-ae7b-4e48-be29-2af806ab256b)
 
