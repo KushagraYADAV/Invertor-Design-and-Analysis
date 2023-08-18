@@ -6,3 +6,4 @@ first we do the analysis of NMOS and PMOS devices, specifically the 1.8v standar
 
 For the design and simulation of our Inverter we'll use Xschem for Schematic Capture and Ngspice for Spice netlist simulation. 
 
+Analysis of MOSFET models
