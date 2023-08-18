@@ -9,7 +9,8 @@ For the design and simulation of our Inverter we'll use Xschem for Schematic Cap
 ## Analysis of MOSFET models
 We start with the analysis of MOSFET models present in sky130 pdk. I will use the 1.8v transistor models. Below is the schematic I created in Xschem.
 
-![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/61bcdae1-2728-428c-9de5-25c61ac78072)
+![Screenshot from 2023-08-16 15-19-25](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/ecb89da4-200e-4803-8b44-439e65456eb1)
+
 
 
 The components used are:
@@ -18,9 +19,16 @@ vsource.sym - from xschem devices library
 code_shown.sym - from xschem devices library
 
 I used the above to plot the basic characteristic plots for an NMOS Transistor, that is Ids vs Vds and Ids vs Vgs
-We can see the DC sweep on the VGS source for different values of VDS.
- ![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/503b26f9-0e37-4fe8-9e91-14c848902fc3)
+We can see the DC sweep on the VGS source for different values of VDS:
 
- Similarly, when I sweep VDS source for different values of VGS, I get the below plot:
+![Screenshot from 2023-08-16 15-31-23](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/3bed2355-5887-4dee-a8a7-a4c7e06a84ee)
+
+
+![Screenshot from 2023-08-16 15-23-02](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/caf5a8d2-ae7b-4e48-be29-2af806ab256b)
+
+ 
  ![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/63fe103a-39bb-4637-8c59-e27ac48815a2)
+
+
+ 
 
