@@ -7,4 +7,6 @@ first we do the analysis of NMOS and PMOS devices, specifically the 1.8v standar
 For the design and simulation of our Inverter we'll use Xschem for Schematic Capture and Ngspice for Spice netlist simulation. 
 
 ## Analysis of MOSFET models
- 
+We start with our analysis of MOSFET models present in sky130 pdk. I would be using the 1.8v transistor models, but you can definitely use and experiment with other ones present there. below is the schematic I created in Xschem.
+
+![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/e1f5fddc-3e0d-4dfa-a9cf-a74fedc28ed6)
