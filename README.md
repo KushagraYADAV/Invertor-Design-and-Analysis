@@ -26,8 +26,6 @@ We can see the DC sweep on the VGS source for different values of VDS:
 
 ![Screenshot from 2023-08-16 15-23-02](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/caf5a8d2-ae7b-4e48-be29-2af806ab256b)
 
- 
- ![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/63fe103a-39bb-4637-8c59-e27ac48815a2)
 
 
  
