@@ -31,5 +31,6 @@ Similarly, when we sweep VDS source for different values of VGS, I get the below
 
 
 
+
  
 
