@@ -4,7 +4,7 @@ In this project, I'll be working on the design of an inverter and understanding 
 
 First, we do the analysis of NMOS and PMOS devices, specifically the 1.8v standard models available inside the pdk. After this, we start with the design of a CMOS inverter that includes a schematic, and measurement of various parameters like noise margin, rise time, fall time, power, etc. 
 
-For the design and simulation of our Inverter, we'll use Xschem for Schematic Capture and Ngspice for Spice netlist simulation. 
+For the design and simulation of our Inverter, we'll use Xschem for Schematic Capture and Ngspice for Spice Netlist simulation. 
 
 ## 1.1 Analysis of MOSFET models
 We start with the analysis of MOSFET models present in sky130 pdk. I will use the 1.8v transistor models. Below is the schematic I created in Xschem.
