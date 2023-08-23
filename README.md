@@ -22,30 +22,36 @@ code_shown.sym - from xschem devices library
 I used the above to plot the basic characteristic plots for an NMOS Transistor, that is, Ids vs Vds and Ids vs Vgs
 We can see the DC sweep on the VGS source for different values of VDS:
 
-![Screenshot from 2023-08-16 15-31-23](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/3bed2355-5887-4dee-a8a7-a4c7e06a84ee)
+![2](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/1ff3a14d-5011-4768-b461-4800a3ba72c0)
+
 
 Similarly, when we sweep the VDS source for different values of VGS, I get the below plot:
 
-![Screenshot from 2023-08-16 15-23-02](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/caf5a8d2-ae7b-4e48-be29-2af806ab256b)
+![3](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/a9cf558b-f8e1-44d7-9f14-f49f0eb5da42)
+
 
 ## 1.2 CMOS Inverter Design and Analysis
-I have designed a Schematic of the Inverter, where the Width ratio of PMOS to NMOS is 2,two and a pulse is applied as input. The schematic is shown below: The transfer characteristics is given below:
+I have designed a Schematic of the Inverter, where the Width ratio of PMOS to NMOS is 2, two and a pulse is applied as input. The schematic is shown below: The transfer characteristics is given below:
 
-![Screenshot from 2023-08-19 14-27-56](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/a8ed229b-75f9-4811-bfb7-47c5256ebb71)
+![4](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b9c70aee-dbba-405f-b4b9-201634416bb0)
+
 
  
-And the transfer characteristics for the transient analysis is given below:
+The transfer characteristics for the transient analysis is given below:
 
-![Screenshot from 2023-08-19 14-27-15](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/d5238a9c-a951-4535-bd0f-32a1bff1e24a)
+![5](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/0411891e-0840-4533-87ea-efbf48cd5222)
+
 
 
 Now we want to find the switching threshold at which vin=vout. For this, we need to do the dc analysis of the CMOS inverter. We can convert our inverter into an equivalent symbol as shown below: 
 
-![Screenshot from 2023-08-17 13-51-35](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b4a3f545-cf75-4480-a961-53733e1836b3)
+![6](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/5b6e28f6-14ed-4e3e-9f70-ce59525d234e)
+
 
 The Plot of Vout vs Vin is shown below:
 
-![Screenshot from 2023-08-17 14-08-07](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/9b803f96-875e-4a45-b27b-4cd1b54c581d)
+![7](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/237eff7c-1bdc-4335-9337-7db589c1658b)
+
 
 We can also find lower and higher noise margins. For that, we know that
 
@@ -60,7 +66,8 @@ NMH(Noise Margin for HIGH) - VOH - VIH
 
 We can now find the trip point Vm and also the Noise Margins by using the below codes:
 
-![Screenshot from 2023-08-19 14-53-16](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/f1073a36-8b22-4d6b-940e-6c0873a1d121)
+![8](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b1da88b3-2b2a-4026-bca0-a1ff38af7c89)
+
 
 NML=VIL-VOL  
    =0.7435-0  
@@ -74,56 +81,66 @@ The values of VOH and VOL are not exactly 1.8 and 0 respectively, but are somewh
 
 The plot of gain, vout vs vin is shown below:
 
-![Screenshot from 2023-08-19 15-01-46](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/e40a2160-7890-4c51-8912-b9b6e52da066)
+![9](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/bbdeff71-c542-408d-83a6-2f1874d69cc3)
+
 
 
 Now we move forward to calculate propagation delay, rise time and fall time. For this we again move to the transient analysis. 
 
 The schematic as shown below:  
 
-![Screenshot from 2023-08-17 13-53-15](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b7f202d5-4d3e-46cd-95a5-9f2105ef6cc7)
+![10](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/11965dfd-8d2f-41bb-8c75-9a68d8ce6029)
+
 
 
 We write the following code to find the 50% threshold of vin and vout and then calculate the propagation delay:
 
-![Screenshot from 2023-08-19 16-13-49](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/2f58af8f-c673-4324-8d29-bf1be83792fc)
+![11](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/35d27490-53f4-4f6e-b2b3-58ef70e5259c)
+
 
 We take the average of tpLH and tpHL to find the overall propagation delay.    
 
 Note that all the measurements are done without considering a load capacitance at the output of the inverter.    
 Now we will calculate the rise time of the CMOS inverter. We use the following code to do that:   
 
-![Screenshot from 2023-08-19 16-20-22](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b81af859-7d31-4b3c-bbc9-b45af1651e1d)
+![12](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/0752b9fe-72e3-4535-8eba-272a4e067840)
+
 
 Vout, vin curve with respect to time is shown below:   
-![Screenshot from 2023-08-17 14-43-29](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/fea59d97-342f-4bfc-920a-cc4dc648976a)
+
+![13](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/418fd7b3-1ba4-4402-8fa8-9a97c4b7e527)
+
 
 
 Now we consider a load capacitance at the output of our invertor. The value of the capacitance we consider is 0.5pF. The schematic is shown below: 
 
-![Screenshot from 2023-08-17 13-53-15](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/c30feaf9-fb80-4858-893b-0797fd3c4ab7)
+![14](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/7a2f9635-6f9a-4378-9fb3-bf246151f073)
 
 
-Note that, for unloaded invertors, doubling the sizes of the NMOS and PMOS doesn't have much effect on rise time. For loaded invertor, it will have effect. We will look into how much effect that 
-will have by taking the Widths to be 2,1 the first case and 4,2 the second case.
 
-For the width of Pmos and NMOS to be 2 and 1 respectively, the rise time in presence of a load can be calculated as: 
+Note that, for unloaded inverters, doubling the sizes of the NMOS and PMOS doesn't have much effect on rise time. For a loaded inverter, it will have an effect. We will look into how much effect that 
+will have by taking the Widths to be 2,1 in the first case and 4,2 in the second case.
 
-![Screenshot from 2023-08-19 16-27-15](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/ebf5433a-7793-416e-aff5-c7463b64746e)
+For the width of Pmos and NMOS to be 2 and 1, respectively, the rise time in the presence of a load can be calculated as: 
+
+![15](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/a4e6111b-da97-486e-88f1-50c171073ba2)
+
 
 Vout, vin curve with respect to time is shown below:   
 
-![Screenshot 2 1  1 8](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/8f758dd4-5437-4389-956c-574ce147c4e3)
+![16](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/32ff03f6-01a3-4f41-adc2-403565baa15e)
+
 
 
 For the width of PMOS and NMOS to be 4 and 2, respectively, the rise time in the presence of a load can be calculated as follows: 
 
-![Screenshot from 2023-08-19 16-29-13](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/059e094b-cd04-4940-9b21-fafea664263f)
+![17](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/b651a032-f86d-414b-ab1c-494e76e0b785)
+
 
 
 Vout, vin curve with respect to time is shown below:  
 
-![Screenshot 4 1 1 8](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/7e9b5c5c-0f71-4641-bcae-dc7782f3f90f)
+![18](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/a4beaae5-04b9-4104-96cb-e1a07e7815c3)
 
 
 We can see there is a significant drop in the rise time by doubling the widths of NMOS and PMOS. Also, the rise time in the 0.5pF case is more compared to 02pF, as 0.5pF has more charging time
@@ -132,12 +149,14 @@ than 0.2pF.
 Now we move forward to calculate power in both cases when the load is 0.5pF and when it is 0.2pF. These values will be calculated for widths of PMOS and NMOS as 4 and 2 respectively. 
 For 0.5pf case, it is given as : 
 
-![Screenshot from 2023-08-19 16-58-26](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/6056ab27-8467-458f-973b-f709cde235e5)
+![19](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/feea3ca8-2678-421f-9564-f345ce13c5f9)
+
 
 
 For 0.2pf case, it is given as : 
 
-![Screenshot from 2023-08-19 17-00-03](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/3b07b30c-29b1-4aec-8ab3-d4f4a300fb14)
+![20](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/ca06e050-0db8-4867-90b4-d5382eb91934)
+
 
 We can infer that power is more in the case of 0.5pF case as it draws more current while charging. 
 
