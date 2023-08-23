@@ -9,7 +9,8 @@ For the design and simulation of our Inverter, we'll use Xschem for Schematic Ca
 ## 1.1 Analysis of MOSFET models
 We start with the analysis of MOSFET models present in sky130 pdk. I will use the 1.8v transistor models. Below is the schematic I created in Xschem.
 
-![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/484f4e57-b0d7-40ae-a4d7-0a9c8fe1f821)
+![image](https://github.com/KushagraYADAV/Invertor-Design-and-Analysis/assets/65351472/9d90ca9f-70ca-4983-a3ee-50507b8027c8)
+
 
 
 
